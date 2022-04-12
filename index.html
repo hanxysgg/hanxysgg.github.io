@@ -14,7 +14,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CBlack+Ops+One:300,300italic,400,400italic,700,700italic%7CBitter:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CBlack+Ops+One:300,300italic,400,400italic,700,700italic%7CGeorgia:300,300italic,400,400italic,700,700italic%7Csans:300,300italic,400,400italic,700,700italic%7CSource+Serif+Pro:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
@@ -49,7 +49,11 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -128,18 +132,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +181,145 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/11/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="hanxysgg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HANXYSGG's LIGHTHOUSE">
+      <meta itemprop="description" content="一个还没有学上的废物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HANXYSGG's LIGHTHOUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/11/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/" class="post-title-link" itemprop="url">数学基础查缺补漏</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-11 23:01:08" itemprop="dateCreated datePublished" datetime="2022-04-11T23:01:08+08:00">2022-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-12 18:32:38" itemprop="dateModified" datetime="2022-04-12T18:32:38+08:00">2022-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/math/" itemprop="url" rel="index"><span itemprop="name">math</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="一数论">一、数论</h1>
+<h2 id="数论基础">1. 数论基础</h2>
+<h3 id="整除">整除</h3>
+<h4 id="整除的定义">整除的定义</h4>
+<p>设<span class="math inline">\(a,b\in \mathbf{Z},a\neq
+0\)</span>。如果<span class="math inline">\(\exists q\in
+\mathbf{Z}\)</span>，使得<span
+class="math inline">\(b=aq\)</span>，那么就说<span
+class="math inline">\(b\)</span>可被<span
+class="math inline">\(a\)</span>整除，记作<span
+class="math inline">\(a\mid b\)</span>，且称<span
+class="math inline">\(b\)</span>是<span
+class="math inline">\(a\)</span>的倍数，<span
+class="math inline">\(a\)</span>是<span
+class="math inline">\(b\)</span>的约数（因数）。</p>
+<h4 id="整除的性质">整除的性质</h4>
+<ul>
+<li><span class="math inline">\(a\mid b\iff -a\mid b\iff a\mid -b\iff
+|a|\mid |b|\)</span></li>
+<li><span class="math inline">\(a\mid b\wedge b\mid c\Rightarrow a\mid
+c\)</span></li>
+<li><span class="math inline">\(a\mid b\wedge a\mid c\iff\forall
+x,y\in\mathbf{Z},a\mid(xb+yc)\)</span></li>
+<li><span class="math inline">\(a\mid b\wedge b\mid a\Rightarrow b=\pm
+a\)</span></li>
+<li>设<span class="math inline">\(m\neq 0\)</span>，那么<span
+class="math inline">\(a\mid b\iff ma\mid mb\)</span></li>
+<li>设<span class="math inline">\(b\neq 0\)</span>，那么<span
+class="math inline">\(a\mid b\Rightarrow |a|\leq |b|\)</span></li>
+<li>设<span class="math inline">\(a\neq 0,b=qa+c\)</span>，那么<span
+class="math inline">\(a\mid b\iff a\mid c\)</span></li>
+</ul>
+<h3 id="模运算">模运算</h3>
+<h4 id="模运算的定义">模运算的定义</h4>
+<p>对于任意实数<span class="math inline">\(x,y\)</span>，可以有<span
+class="math inline">\(x\mod y=x-y[\frac{x}{y}],y\neq 0\)</span></p>
+<p>模<span
+class="math inline">\((mod)\)</span>在一些场合可以使用符号<span
+class="math inline">\(\%\)</span>表示，它是一个二元运算。 <span
+class="math display">\[
+0\leq x\mod y&lt;y,y&gt;0;\\
+0\geq x\mod y&gt;y,y&lt;0
+\]</span></p>
+<h4 id="模运算的性质">模运算的性质</h4>
+<p>模运算的规则、公式与基本四则运算类似，但除法例外：</p>
+<ul>
+<li><span class="math inline">\((a+b)\% p=(a\% p+b\% p)\%
+p\)</span>，推广：<span class="math inline">\((\sum x)\% p=(\sum x\%
+p)\% p\)</span></li>
+<li><span class="math inline">\((a-b)\% p=(a\% p-b\% p)\%
+p\)</span></li>
+<li><span class="math inline">\((a*b)\% p=(a\% p*b\% p)\%
+p\)</span></li>
+<li><span class="math inline">\(a^b\% p=(a\% p)^b\% p\)</span></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/10/Unfairness-when-using-a-fair-lock-in-Java/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -205,9 +348,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-04-10 16:59:50 / Modified: 20:10:27" itemprop="dateCreated datePublished" datetime="2022-04-10T16:59:50+08:00">2022-04-10</time>
+      <time title="Created: 2022-04-10 16:59:50" itemprop="dateCreated datePublished" datetime="2022-04-10T16:59:50+08:00">2022-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-11 17:40:18" itemprop="dateModified" datetime="2022-04-11T17:40:18+08:00">2022-04-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -229,8 +378,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>​    Days ago I would implement a barrier mechanism which is used to co-ordinate the progress of multiple threads. I was asked to ensure that the threads that are held at the barrier pass it in the order they arrive, first in, first out, and I was not allowed to store threads, or any information about threads, in any data structure to implement the solution (lists, queue, arrays, etc.).</p>
-<p>​    I had to use some mechanism which already contains a FIFO queue and gives consideration to mutual exclusion. So I thought of using ReentrantLock in Java to ensure fairness:
+          <p>​ Days ago I would implement a barrier mechanism which is used to
+co-ordinate the progress of multiple threads. I was asked to ensure that
+the threads that are held at the barrier pass it in the order they
+arrive, first in, first out, and I was not allowed to store threads, or
+any information about threads, in any data structure to implement the
+solution (lists, queue, arrays, etc.).</p>
+<p>​ I had to use some mechanism which already contains a FIFO queue and
+gives consideration to mutual exclusion. So I thought of using
+ReentrantLock in Java to ensure fairness:
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/04/10/Unfairness-when-using-a-fair-lock-in-Java/#more" rel="contents">
@@ -306,19 +462,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>

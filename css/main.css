@@ -221,7 +221,7 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: Roboto, sans-serif;
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 16px;
   line-height: 2;
   min-height: 100%;
@@ -234,7 +234,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Georgia, sans;
+  font-family: Georgia, sans, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 30px 0 15px;
@@ -310,7 +310,7 @@ dd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 14px;
+  font-size: 15px;
   margin: 0 0 20px;
   width: 100%;
 }
@@ -465,7 +465,7 @@ pre figcaption {
   background: var(--highlight-gutter-background);
   color: var(--highlight-foreground);
   display: flow-root;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.2;
   padding: 0.5em;
 }
@@ -482,11 +482,11 @@ pre figcaption a:hover {
 }
 pre,
 code {
-  font-family: Menlo, "PT Mono", Consolas, Monaco, Menlo, monospace;
+  font-family: Menlo, consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
 }
 code {
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 15px;
   padding: 2px 4px;
   overflow-wrap: break-word;
 }
@@ -1943,7 +1943,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Bitter, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Source Serif Pro, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2130,7 +2130,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Bitter, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Source Serif Pro, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
