@@ -134,12 +134,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -213,7 +213,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-17 00:08:07" itemprop="dateModified" datetime="2022-04-17T00:08:07+08:00">2022-04-17</time>
+      <time title="Modified: 2022-04-17 13:29:48" itemprop="dateModified" datetime="2022-04-17T13:29:48+08:00">2022-04-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -221,7 +221,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E4%BD%8D%E8%BF%90%E7%AE%97/" itemprop="url" rel="index"><span itemprop="name">位运算</span></a>
+          <a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Algorithm/Bit-Manipulation/" itemprop="url" rel="index"><span itemprop="name">Bit Manipulation</span></a>
         </span>
     </span>
 
@@ -238,11 +242,11 @@
           <h3 id="基本技巧">基本技巧</h3>
 <h4
 id="判断一个数是不是2的非负整数次幂">判断一个数是不是2的非负整数次幂</h4>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设x为int类型</span></span><br><span class="line">x &gt; <span class="number">0</span> &amp;&amp; (x &amp; (x - <span class="number">1</span>)) == <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is2exp</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &gt; <span class="number">0</span> &amp;&amp; (x &amp; (x - <span class="number">1</span>)) == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="取绝对值">取绝对值</h4>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设x为int类型</span></span><br><span class="line">(x ^ (x &gt;&gt; <span class="number">31</span>)) - (x &gt;&gt; <span class="number">31</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">abs</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 注意溢出，x不能取INT_MIN</span></span><br><span class="line">    <span class="keyword">return</span> (x ^ (x &gt;&gt; <span class="number">31</span>)) - (x &gt;&gt; <span class="number">31</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="判断两个数是否同号">判断两个数是否同号</h4>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设x为int类型且x != 0</span></span><br><span class="line">(x ^ y) &gt;= <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">same_sign</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 前提要求x和y不为0</span></span><br><span class="line">    <span class="keyword">return</span> (x ^ y) &gt;= <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/04/16/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8A%80%E5%B7%A7/#more" rel="contents">
@@ -312,7 +316,7 @@ id="判断一个数是不是2的非负整数次幂">判断一个数是不是2的
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-16 23:31:00" itemprop="dateModified" datetime="2022-04-16T23:31:00+08:00">2022-04-16</time>
+      <time title="Modified: 2022-04-17 13:38:14" itemprop="dateModified" datetime="2022-04-17T13:38:14+08:00">2022-04-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -320,7 +324,7 @@ id="判断一个数是不是2的非负整数次幂">判断一个数是不是2的
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/math/" itemprop="url" rel="index"><span itemprop="name">math</span></a>
+          <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
         </span>
     </span>
 
@@ -359,7 +363,7 @@ c\)</span></li>
 x,y\in\mathbf{Z},a\mid(xb+yc)\)</span></li>
 <li><span class="math inline">\(a\mid b\wedge b\mid a\Rightarrow b=\pm
 a\)</span></li>
-<li>设 <span class="math inline">\(m\neq 0\)</span>，那 么 <span
+<li>设 <span class="math inline">\(m\neq 0\)</span>，那么 <span
 class="math inline">\(a\mid b\iff ma\mid mb\)</span></li>
 <li>设 <span class="math inline">\(b\neq 0\)</span>，那么 <span
 class="math inline">\(a\mid b\Rightarrow |a|\leq |b|\)</span></li>
