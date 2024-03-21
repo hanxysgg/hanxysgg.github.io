@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="数论数论基础整除（Divisibility rule）整除的定义设 $a,b\in \mathbb{Z},a\neq 0$. 如果 $\exists q\in \mathbb{Z}$，使得 $b&#x3D;aq$，那么就说 $b$ 可被 $a$ 整除，记作 $a\mid b$ ，且称 $b$ 是 $a$ 的倍数，$a$ 是 $b$ 的约数（因数）. 整除的性质 $a\mid b\iff -a\mi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学基础查缺补漏">
+<meta property="og:url" content="http://example.com/2022/04/11/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/index.html">
+<meta property="og:site_name" content="HANXYSGG&#39;S OUTPUT">
+<meta property="og:description" content="数论数论基础整除（Divisibility rule）整除的定义设 $a,b\in \mathbb{Z},a\neq 0$. 如果 $\exists q\in \mathbb{Z}$，使得 $b&#x3D;aq$，那么就说 $b$ 可被 $a$ 整除，记作 $a\mid b$ ，且称 $b$ 是 $a$ 的倍数，$a$ 是 $b$ 的约数（因数）. 整除的性质 $a\mid b\iff -a\mi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-11T15:01:08.000Z">
+<meta property="article:modified_time" content="2024-03-20T08:22:11.918Z">
+<meta property="article:author" content="hanxysgg">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/04/11/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/04/11/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/","path":"2022/04/11/数学基础查缺补漏/","title":"数学基础查缺补漏"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数学基础查缺补漏 | HANXYSGG'S OUTPUT</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">HANXYSGG'S OUTPUT</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">数论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="nav-number">1.1.</span> <span class="nav-text">数论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E9%99%A4%EF%BC%88Divisibility-rule%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">整除（Divisibility rule）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B4%E9%99%A4%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">整除的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B4%E9%99%A4%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">整除的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%A6%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">约数的性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E8%BF%90%E7%AE%97%EF%BC%88Modulo-Modular-arithmetic%EF%BC%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">模运算（Modulo&#x2F;Modular arithmetic）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">模运算的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">程序设计中模运算的性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E4%BD%99%EF%BC%88Congruence%EF%BC%89"><span class="nav-number">1.1.3.</span> <span class="nav-text">同余（Congruence）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8C%E4%BD%99%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">同余的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8C%E4%BD%99%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">同余的性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E5%BC%95%E7%90%86%EF%BC%88Euclid%E2%80%99s-lemma%EF%BC%89"><span class="nav-number">1.1.4.</span> <span class="nav-text">欧几里得引理（Euclid’s lemma）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86%EF%BC%88Fundamental-theorem-of-arithmetic%EF%BC%89"><span class="nav-number">1.1.5.</span> <span class="nav-text">算数基本定理（Fundamental theorem of arithmetic）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%EF%BC%88Greatest-common-divisor%EF%BC%89%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0%EF%BC%88Least-common-multiple%EF%BC%89"><span class="nav-number">1.1.6.</span> <span class="nav-text">最大公约数（Greatest common divisor）和最小公倍数（Least common multiple）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">最大公约数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">最小公倍数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%B4%E8%9C%80%E7%AD%89%E5%BC%8F%EF%BC%88Bezout%E2%80%99s-identity%EF%BC%89"><span class="nav-number">1.1.7.</span> <span class="nav-text">裴蜀等式（Bézout’s identity）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%EF%BC%88Euler%E2%80%99s-totient-phi-function%EF%BC%89"><span class="nav-number">1.1.8.</span> <span class="nav-text">欧拉函数（Euler’s totient&#x2F;phi function）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">欧拉函数的计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8-1"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86%EF%BC%88Fermat%E2%80%99s-little-theorem%EF%BC%89"><span class="nav-number">1.1.9.</span> <span class="nav-text">费马小定理（Fermat’s little theorem）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%EF%BC%88Euler%E2%80%99s-theorem%EF%BC%89"><span class="nav-number">1.1.10.</span> <span class="nav-text">欧拉定理（Euler’s theorem）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E9%80%86%E5%85%83%EF%BC%88Modular-multiplicative-inverse%EF%BC%89"><span class="nav-number">1.1.11.</span> <span class="nav-text">模逆元（Modular multiplicative inverse）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E8%AE%BA%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">数论相关算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%9B%E6%B3%95%EF%BC%88Sieve%EF%BC%89"><span class="nav-number">1.2.1.</span> <span class="nav-text">筛法（Sieve）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%83%E6%B0%8F%E7%AD%9B%EF%BC%88Sieve-of-Eratosthenes%EF%BC%89"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">埃氏筛（Sieve of Eratosthenes）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%AD%9B%EF%BC%88Euler%E2%80%99s-sieve%EF%BC%89"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">线性筛（Euler’s sieve）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3%EF%BC%88Prime-factorization%EF%BC%89"><span class="nav-number">1.2.2.</span> <span class="nav-text">质因数分解（Prime factorization）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%B9%82%EF%BC%88Binary-exponentiation%EF%BC%89"><span class="nav-number">1.2.3.</span> <span class="nav-text">快速幂（Binary exponentiation）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">算法原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%B9%82%E6%B1%82%E9%80%86%E5%85%83"><span class="nav-number">1.2.4.</span> <span class="nav-text">快速幂求逆元</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86-1"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">算法原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%EF%BC%88Euclidean-algorithm%EF%BC%89"><span class="nav-number">1.2.5.</span> <span class="nav-text">欧几里得算法（Euclidean algorithm）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%EF%BC%88Extended-Euclidean-algorithm%EF%BC%89"><span class="nav-number">1.2.6.</span> <span class="nav-text">扩展欧几里得算法（Extended Euclidean algorithm）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.6.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-number">1.2.6.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%EF%BC%88Abstract-algebra%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">抽象代数（Abstract algebra）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%A4%EF%BC%88Group%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">群（Group）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%92%8C%E5%9F%9F%EF%BC%88Ring-and-Field%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">环和域（Ring and Field）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%EF%BC%88Lattice%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">格（Lattice）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">数值分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">3.1.1.</span> <span class="nav-text">批量梯度下降法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">3.1.2.</span> <span class="nav-text">随机梯度下降法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%9B%E9%A1%BF%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">牛顿法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%9F%E7%89%9B%E9%A1%BF%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">拟牛顿法</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">hanxysgg</p>
+  <div class="site-description" itemprop="description">To make my mind compact.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/11/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanxysgg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HANXYSGG'S OUTPUT">
+      <meta itemprop="description" content="To make my mind compact.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数学基础查缺补漏 | HANXYSGG'S OUTPUT">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数学基础查缺补漏
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-11 23:01:08" itemprop="dateCreated datePublished" datetime="2022-04-11T23:01:08+08:00">2022-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-20 16:22:11" itemprop="dateModified" datetime="2024-03-20T16:22:11+08:00">2024-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><h2 id="数论基础"><a href="#数论基础" class="headerlink" title="数论基础"></a>数论基础</h2><h3 id="整除（Divisibility-rule）"><a href="#整除（Divisibility-rule）" class="headerlink" title="整除（Divisibility rule）"></a>整除（Divisibility rule）</h3><h4 id="整除的定义"><a href="#整除的定义" class="headerlink" title="整除的定义"></a>整除的定义</h4><p>设 $a,b\in \mathbb{Z},a\neq 0$. 如果 $\exists q\in \mathbb{Z}$，使得 $b&#x3D;aq$，那么就说 $b$ 可被 $a$ 整除，记作 $a\mid b$ ，且称 $b$ 是 $a$ 的倍数，$a$ 是 $b$ 的约数（因数）.</p>
+<h4 id="整除的性质"><a href="#整除的性质" class="headerlink" title="整除的性质"></a>整除的性质</h4><ul>
+<li>$a\mid b\iff -a\mid b\iff a\mid -b\iff |a|\mid |b|$</li>
+<li>$a\mid b\wedge b\mid c\implies a\mid c$</li>
+<li>$a\mid b\wedge a\mid c\iff\forall x,y\in\mathbb{Z},a\mid(xb+yc)$</li>
+<li>$a\mid b\wedge b\mid a\implies b&#x3D;\pm a$</li>
+<li>设 $m\neq 0$，那么 $a\mid b\iff ma\mid mb$</li>
+<li>设 $b\neq 0$，那么 $a\mid b\implies |a|\leq |b|$</li>
+<li>设 $a\neq 0,b&#x3D;qa+c$，那么 $a\mid b\iff a\mid c$</li>
+</ul>
+<p>$0$ 是所有非 $0$ 整数的倍数。对于整数 $b\neq 0$，$b$ 的约数只有有限个.</p>
+<p>显然约数（显然因数）：对于整数 $b\neq 0,\pm 1,\pm b$ 是 $b$ 的显然约数. 当 $b&#x3D;\pm 1$ 时，$b$ 只有两个显然约数.</p>
+<p>对于整数 $b\neq 0$，$b$ 的其他约数称为真约数（真因数、非显然约数、非显然因数）.</p>
+<span id="more"></span>
+
+
+
+<h4 id="约数的性质"><a href="#约数的性质" class="headerlink" title="约数的性质"></a>约数的性质</h4><ul>
+<li>设整数 $b\neq 0$，当 $d$ 遍历 $b$ 的全体约数的时候，$\dfrac{b}{d}$ 也遍历 $b$ 的全体约数.</li>
+<li>设整数 $b&gt;0$，当 $d$ 遍历 $b$ 的全体正约数的时候，$\dfrac{b}{d}$ 也遍历 $b$ 的全体正约数.</li>
+</ul>
+<h3 id="模运算（Modulo-Modular-arithmetic）"><a href="#模运算（Modulo-Modular-arithmetic）" class="headerlink" title="模运算（Modulo&#x2F;Modular arithmetic）"></a>模运算（Modulo&#x2F;Modular arithmetic）</h3><h4 id="模运算的定义"><a href="#模运算的定义" class="headerlink" title="模运算的定义"></a>模运算的定义</h4><p>对于任意实数 $x,y$，可以有 $x\bmod y&#x3D;x-y\left[\dfrac{x}{y}\right],y\neq 0$</p>
+<p>模 $(\bmod)$ 在一些场合可以使用符号 $%$ 表示，它是一个二元运算。<br>$$<br>\begin{aligned}<br>0\leq x\bmod y&lt;y,\ y&gt;0\<br>0\geq x\bmod y&gt;y,\ y&lt;0<br>\end{aligned}<br>$$</p>
+<h4 id="程序设计中模运算的性质"><a href="#程序设计中模运算的性质" class="headerlink" title="程序设计中模运算的性质"></a>程序设计中模运算的性质</h4><p>在算法设计中，模运算的规则、公式与基本四则运算类似，但除法例外：</p>
+<ul>
+<li>$(a+b)\bmod p&#x3D;(a\bmod p+b\bmod p)\bmod p$，推广：$(\sum x)\bmod p&#x3D;(\sum x\bmod p)\bmod p$</li>
+<li>$(a-b)\bmod p&#x3D;(a\bmod p-b\bmod p)\bmod p$</li>
+<li>$(a\times b)\bmod p&#x3D;(a\bmod p\times b\bmod p)\bmod p$</li>
+<li>$a^b\bmod p&#x3D;(a\bmod p)^b\bmod p$</li>
+</ul>
+<h3 id="同余（Congruence）"><a href="#同余（Congruence）" class="headerlink" title="同余（Congruence）"></a>同余（Congruence）</h3><h4 id="同余的定义"><a href="#同余的定义" class="headerlink" title="同余的定义"></a>同余的定义</h4><p>设整数 $m\neq 0$，若 $m\mid (a-b)$，称 $m$ 为模数（模），$a$ 同余于 $b$ 模 $m$，$b$ 是对模 $m$ 的剩余，记作 $a\equiv b\pmod m$.</p>
+<p>否则，$a$ 不同余于 $b$ 模 $m$，$b$ 不是 $a$ 对模 $m$ 的剩余，记作 $a\not\equiv b\pmod m$.</p>
+<p>这样的等式，称为模 $m$ 的同余式，简称同余式.</p>
+<p>根据整除的性质，上述同余式也等价于 $a\equiv b\pmod{(-m)}$.</p>
+<div class="note warning"><p>如果没有特别说明，模数总是正整数.</p>
+</div>
+
+<p>式中的 $b$ 是 $a$ 对模 $m$ 的剩余，这个概念与余数完全一致. 通过限定 $b$ 的范围，相应的有 $a$ 对模 $m$ 的最小非负剩余、绝对最小剩余、最小正剩余.</p>
+<h4 id="同余的性质"><a href="#同余的性质" class="headerlink" title="同余的性质"></a>同余的性质</h4><ul>
+<li>自反性：$a\equiv a\pmod m$</li>
+<li>对称性：若 $a\equiv b\pmod m$，则 $b\equiv a\pmod m$</li>
+<li>传递性：若 $a\equiv b\pmod m$，$b\equiv c\pmod m$，则 $a\equiv c\pmod m$</li>
+<li>线性运算：若 $a,b,c,d\in \mathbb{Z},m\in \mathbb{N}^*,a\equiv b\pmod m,c\equiv d\pmod m$，则有：<ul>
+<li>$a\pm c\equiv b\pm d\pmod m$</li>
+<li>$a\times c\equiv b\times d\pmod m$</li>
+</ul>
+</li>
+<li>若 $a,b\in \mathbb{Z},k,m\in \mathbb{N}^*,a\equiv b\pmod m$，则 $ak\equiv bk\pmod{mk}$</li>
+<li>若 $a,b\in \mathbb{Z},d,m\in \mathbb{N}^*,d\mid a,d\mid b,d\mid m$，则当 $a\equiv b\pmod m$ 成立时，有 $\dfrac{a}{d}\equiv \dfrac{b}{d}\pmod{\dfrac{m}{d}}$</li>
+<li>若 $a,b\in \mathbb{Z},d,m\in \mathbb{N}^*,d\mid m$，则当 $a\equiv b\pmod m$ 成立时，有 $a\equiv b\pmod d$</li>
+<li>若 $a,b\in \mathbb{Z},d,m\in \mathbb{N}^*$，则当 $a\equiv b\pmod m$ 成立时，有 $\gcd{(a,m)}&#x3D;\gcd{(b,m)}$；若 $d$ 能整除 $m$ 及 $a,b$ 中的一个，则 $d$ 必定能整除 $a,b$ 中的另一个.</li>
+</ul>
+<h3 id="欧几里得引理（Euclid’s-lemma）"><a href="#欧几里得引理（Euclid’s-lemma）" class="headerlink" title="欧几里得引理（Euclid’s lemma）"></a>欧几里得引理（Euclid’s lemma）</h3><p>如果质数 $p$ 整除两个整数 $a$ 与 $b$ 的乘积 $ab$，那么 $p$ 一定整除 $a$ 或 $b$ 中的至少一个.</p>
+<h3 id="算数基本定理（Fundamental-theorem-of-arithmetic）"><a href="#算数基本定理（Fundamental-theorem-of-arithmetic）" class="headerlink" title="算数基本定理（Fundamental theorem of arithmetic）"></a>算数基本定理（Fundamental theorem of arithmetic）</h3><p>算数基本定理，又称为正整数的唯一分解定理，即：每个大于 $1$ 的整数可以被分解为一系列质数的乘积，并且将这些质数按顺序排列以后分解方式唯一.</p>
+<h3 id="最大公约数（Greatest-common-divisor）和最小公倍数（Least-common-multiple）"><a href="#最大公约数（Greatest-common-divisor）和最小公倍数（Least-common-multiple）" class="headerlink" title="最大公约数（Greatest common divisor）和最小公倍数（Least common multiple）"></a>最大公约数（Greatest common divisor）和最小公倍数（Least common multiple）</h3><h4 id="最大公约数"><a href="#最大公约数" class="headerlink" title="最大公约数"></a>最大公约数</h4><p>两个不全为 $0$ 的整数 $a$ 和 $b$ 的最大公约数为可以同时整除 $a$ 和 $b$ 的最大正整数 $d$，也就是说，存在整数 $e$ 和 $f$ 满足 $a&#x3D;de$ 和 $b&#x3D;df$，其中 $d$ 是满足条件的最大者. $a$ 与 $b$ 的最大公约数记为 $\gcd{(a,b)}$.</p>
+<p>当 $a$ 或 $b$ 其中一个为 $0$ 时，$\gcd{(a,0)}&#x3D;\gcd{(0,a)}&#x3D;|a|$.</p>
+<h4 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h4><p>两个不全为 $0$ 的整数 $a$ 和 $b$ 的最小公倍数可由它们的最大公约数计算得到：<br>$$<br>\operatorname{lcm}{(a,b)}&#x3D;\frac{|a\cdot b|}{\gcd{(a,b)} }<br>$$</p>
+<h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><ul>
+<li>$\operatorname{lcm}{(m,n)}\cdot\gcd{(m,n)}&#x3D;m\cdot n$</li>
+</ul>
+<h3 id="裴蜀等式（Bezout’s-identity）"><a href="#裴蜀等式（Bezout’s-identity）" class="headerlink" title="裴蜀等式（Bézout’s identity）"></a>裴蜀等式（Bézout’s identity）</h3><p>设整数 $a$ 和 $b$ 的最大公约数为 $d$，那么存在整数 $x,y$ 使得 $ax+by&#x3D;d$，并且 $az+bt$ 所能表示的整数都是 $d$ 的倍数.</p>
+<p>在这里，整数 $x$ 和 $y$ 称为 $(a,b)$ 的裴蜀系数，它们不唯一.</p>
+<h3 id="欧拉函数（Euler’s-totient-phi-function）"><a href="#欧拉函数（Euler’s-totient-phi-function）" class="headerlink" title="欧拉函数（Euler’s totient&#x2F;phi function）"></a>欧拉函数（Euler’s totient&#x2F;phi function）</h3><p>欧拉函数 $\varphi{(n)}$ 计算的是范围在 $[1,n]$ 内且与 $n$ 互质的整数的个数.</p>
+<p>换句话说，$\varphi{(n)}$ 计算的是范围在 $[1,n]$ 且满足 $\gcd{(n,k)}&#x3D;1$ 的整数 $k$ 的个数.</p>
+<p>欧拉函数是积性函数：若两个整数 $m$ 与 $n$ 互质，则 $\varphi{(mn)}&#x3D;\varphi{(m)}\varphi{(n)}$.</p>
+<h4 id="欧拉函数的计算"><a href="#欧拉函数的计算" class="headerlink" title="欧拉函数的计算"></a>欧拉函数的计算</h4><p>$\varphi{(n)}&#x3D;n\prod\limits_{p\mid n}\left(1-\dfrac{1}{p}\right)$，其中 $p$  是质数.</p>
+<p>若 $n&#x3D;p_{1}^{k_{1}}p_{2}^{k_{2}}\ldots p_{r}^{k_{r}}$，其中 $p_{1},p_{2},\ldots,p_{r}$ 是 $n$ 的互不相同的质因数，那么欧拉函数还可以写成：<br>$$<br>\varphi{(n)}&#x3D;p_{1}^{k_{1}-1}(p_{1}-1)p_{2}^{k_{2}-1}(p_{2}-1)\cdots p_{r}^{k_{r}-1}(p_{r}-1)<br>$$</p>
+<h4 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h4><ul>
+<li><p>$a\mid b\implies \varphi{(a)}\mid\varphi{(b)}$</p>
+</li>
+<li><p>$m\mid\varphi{(a^{m}-1)}$</p>
+</li>
+<li><p>$\varphi{(mn)}&#x3D;\varphi{(m)}\varphi{(n)}\cdot\dfrac{d}{\varphi{(d)}}$，其中 $d&#x3D;\gcd{(m,n)}$</p>
+<p>特别地：</p>
+<ul>
+<li>$\varphi{(2m)}&#x3D;\begin{cases}2\varphi{(m)}&amp;\text{if m is even}\\varphi{(m)}&amp;\text{if m is odd} \end{cases}$</li>
+<li>$\varphi({n^{m}})&#x3D;n^{m-1}\varphi{(n)}$</li>
+</ul>
+</li>
+<li><p>$\varphi{(\operatorname{lcm}{(m,n)})}\cdot\varphi{(\gcd{(m,n)})}&#x3D;\varphi{(m)}\cdot\varphi{(n)}$</p>
+</li>
+<li><p>$n\geq 3$ 时，$\varphi{(n)}$ 是偶数；若 $n$ 有 $r$ 个不同的质因子，则 $2^{r}\mid\varphi{(n)}$</p>
+</li>
+</ul>
+<h3 id="费马小定理（Fermat’s-little-theorem）"><a href="#费马小定理（Fermat’s-little-theorem）" class="headerlink" title="费马小定理（Fermat’s little theorem）"></a>费马小定理（Fermat’s little theorem）</h3><p>若 $p$ 是质数，那么对于任何整数 $a$，$a^{p}-a$ 都是 $p$ 的整数倍，即 $a^{p}\equiv a\pmod p$.</p>
+<p>特别地，当 $a$ 与 $p$ 互质时，$a^{p-1}-1$ 是 $p$ 的整数倍，即 $a^{p-1}\equiv 1\pmod p$.</p>
+<h3 id="欧拉定理（Euler’s-theorem）"><a href="#欧拉定理（Euler’s-theorem）" class="headerlink" title="欧拉定理（Euler’s theorem）"></a>欧拉定理（Euler’s theorem）</h3><p>如果 $n$ 和 $a$ 是互质的正整数，$\varphi(n)$ 是 $n$ 的欧拉函数，那么 $a^{\varphi(n)}\equiv 1\pmod n$.</p>
+<p>欧拉定理是费马小定理的推广.</p>
+<h3 id="模逆元（Modular-multiplicative-inverse）"><a href="#模逆元（Modular-multiplicative-inverse）" class="headerlink" title="模逆元（Modular multiplicative inverse）"></a>模逆元（Modular multiplicative inverse）</h3><p>整数 $a$ 的模 $m$ 逆元是满足以下条件的整数 $x$：$ax\equiv 1\pmod m$，记为 $x\equiv a^{-1}\pmod m$.</p>
+<p>由欧拉定理可知，如果 $m$ 和 $a$ 是互质的正整数，$\varphi(m)$ 是 $m$ 的欧拉函数，那么 $a^{\varphi(m)}\equiv 1\pmod m$，则 $a^{\varphi{(m)}-1}$ 是 $a$ 的模 $m$ 逆元. 特别地，若 $m$ 是质数，则 $\varphi{(m)}&#x3D;m-1$，此时 $a$ 的模 $m$ 逆元为 $a^{\varphi{(m)}-1}&#x3D;a^{m-2}$.</p>
+<h2 id="数论相关算法"><a href="#数论相关算法" class="headerlink" title="数论相关算法"></a>数论相关算法</h2><h3 id="筛法（Sieve）"><a href="#筛法（Sieve）" class="headerlink" title="筛法（Sieve）"></a>筛法（Sieve）</h3><div class="note info"><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定一个正整数 $n$，求出 $[1,n]$ 中质数的个数.</p>
+</div>
+
+<h4 id="埃氏筛（Sieve-of-Eratosthenes）"><a href="#埃氏筛（Sieve-of-Eratosthenes）" class="headerlink" title="埃氏筛（Sieve of Eratosthenes）"></a>埃氏筛（Sieve of Eratosthenes）</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> not_prime[N]; <span class="comment">// 相当于打表，给每个数标记上“是否是素数”</span></span><br><span class="line">not_prime[<span class="number">0</span>] = not_prime[<span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (not_prime[i]) <span class="keyword">continue</span>;</span><br><span class="line">    <span class="comment">// 判断 j &gt; 0 防止溢出造成段错误</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = i * i; <span class="number">0</span> &lt; j &amp;&amp; j &lt; N; j += i) </span><br><span class="line">        not_prime[j] = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度：$\mathcal{O}(n\log \log n)$，空间复杂度：$\mathcal{O}(n)$.</p>
+<h4 id="线性筛（Euler’s-sieve）"><a href="#线性筛（Euler’s-sieve）" class="headerlink" title="线性筛（Euler’s sieve）"></a>线性筛（Euler’s sieve）</h4><h3 id="质因数分解（Prime-factorization）"><a href="#质因数分解（Prime-factorization）" class="headerlink" title="质因数分解（Prime factorization）"></a>质因数分解（Prime factorization）</h3><div class="note info"><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定正整数 $x$，将它分解质因数，并按照质因数从小到大的顺序输出每个质因数的底数和指数.</p>
+</div>
+
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">divide</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= x / i; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (x % i == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> s = <span class="number">0</span>; <span class="comment">// 记录指数</span></span><br><span class="line">            <span class="keyword">while</span> (x % i == <span class="number">0</span>) &#123;</span><br><span class="line">                x /= i;</span><br><span class="line">                ++s;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, i, s);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, x, <span class="number">1</span>); <span class="comment">// 最后可能还剩一个质因数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="快速幂（Binary-exponentiation）"><a href="#快速幂（Binary-exponentiation）" class="headerlink" title="快速幂（Binary exponentiation）"></a>快速幂（Binary exponentiation）</h3><div class="note info"><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定正整数 $a,k,p$，求 $a^{k}\bmod p$ 的值.</p>
+</div>
+
+<p>直接将 $k$ 个 $a$ 相乘的话，复杂度为 $\mathcal{O}(k)$，于是考虑用快速幂求模算法.</p>
+<h4 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h4><p>考虑正整数 $k$ 的二进制表示，则 $k$ 可分解为一系列 $2$ 的幂次之和.</p>
+<p>例如，$k_{(2)}&#x3D;110101,k&#x3D;2^{0}+2^{2}+2^{4}+2^{5}$，于是 $a^{k}&#x3D;a^{2^{0}}\times a^{2^{2}}\times a^{2^{4}}\times a^{2^{5}}$，其中每一项 $a^{2^{i+1}}&#x3D;\left(a^{2^{i}}\right)^{2}$，于是让 $i$ 从 $0$ 开始循环，即可算出每一项.</p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">qmi</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> k, <span class="type">int</span> p)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (k) &#123;</span><br><span class="line">        <span class="keyword">if</span> (k &amp; <span class="number">1</span>) res = (ll) res * a % p;</span><br><span class="line">        k &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        a = (ll) a * a % p; <span class="comment">// 由当前项的平方算出后一项</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度 $\mathcal{O}(\log{k})$.</p>
+<h3 id="快速幂求逆元"><a href="#快速幂求逆元" class="headerlink" title="快速幂求逆元"></a>快速幂求逆元</h3><div class="note info"><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定正整数 $a,p$，其中 $p$ 是质数，求 $a$ 的模 $p$ 逆元.</p>
+<p>注：$p\mid a$ 时 $a\bmod p$ 不存在乘法逆元.</p>
+</div>
+
+<h4 id="算法原理-1"><a href="#算法原理-1" class="headerlink" title="算法原理"></a>算法原理</h4><p>由欧拉定理知，$p$ 为质数时，$\varphi{(p)}&#x3D;p-1,a^{\varphi{(p)}}&#x3D;a^{p-1}\equiv 1\pmod{p}&#x3D;$，因此 $a$ 的模 $p$ 逆元为 $a^{p-2}$.</p>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">qmi</span>(a, p - <span class="number">2</span>, p); <span class="comment">// 利用上述实现的qmi接口</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="欧几里得算法（Euclidean-algorithm）"><a href="#欧几里得算法（Euclidean-algorithm）" class="headerlink" title="欧几里得算法（Euclidean algorithm）"></a>欧几里得算法（Euclidean algorithm）</h3><div class="note info"><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定一对正整数 $a,b$，求 $\gcd{(a,b)}$.</p>
+</div>
+
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? <span class="built_in">gcd</span>(b, a % b) : a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="扩展欧几里得算法（Extended-Euclidean-algorithm）"><a href="#扩展欧几里得算法（Extended-Euclidean-algorithm）" class="headerlink" title="扩展欧几里得算法（Extended Euclidean algorithm）"></a>扩展欧几里得算法（Extended Euclidean algorithm）</h3><div class="note info"><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定一对正整数 $a,b$，对于裴蜀等式 $ax+by&#x3D;\gcd{(a,b)}$，求出一组裴蜀系数 $x,y$.</p>
+</div>
+
+<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span>&amp; x, <span class="type">int</span>&amp; y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!b) &#123;</span><br><span class="line">        x = <span class="number">1</span>, y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> d = <span class="built_in">exgcd</span>(b, a % b, y, x);</span><br><span class="line">    y -= a / b * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="抽象代数（Abstract-algebra）"><a href="#抽象代数（Abstract-algebra）" class="headerlink" title="抽象代数（Abstract algebra）"></a>抽象代数（Abstract algebra）</h1><h2 id="群（Group）"><a href="#群（Group）" class="headerlink" title="群（Group）"></a>群（Group）</h2><h2 id="环和域（Ring-and-Field）"><a href="#环和域（Ring-and-Field）" class="headerlink" title="环和域（Ring and Field）"></a>环和域（Ring and Field）</h2><h2 id="格（Lattice）"><a href="#格（Lattice）" class="headerlink" title="格（Lattice）"></a>格（Lattice）</h2><h1 id="数值分析"><a href="#数值分析" class="headerlink" title="数值分析"></a>数值分析</h1><h2 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><h3 id="批量梯度下降法"><a href="#批量梯度下降法" class="headerlink" title="批量梯度下降法"></a>批量梯度下降法</h3><h3 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h3><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2><h2 id="拟牛顿法"><a href="#拟牛顿法" class="headerlink" title="拟牛顿法"></a>拟牛顿法</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/10/Unfairness-when-using-a-fair-lock-in-Java/" rel="prev" title="Unfairness when using a fair lock in Java">
+                  <i class="fa fa-angle-left"></i> Unfairness when using a fair lock in Java
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/16/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8A%80%E5%B7%A7/" rel="next" title="位运算技巧">
+                  位运算技巧 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">hanxysgg</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
