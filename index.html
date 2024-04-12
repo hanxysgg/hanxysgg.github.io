@@ -254,7 +254,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-12 15:33:45 / Modified: 22:59:34" itemprop="dateCreated datePublished" datetime="2024-04-12T15:33:45+08:00">2024-04-12</time>
+      <time title="Created: 2024-04-12 15:33:45 / Modified: 23:01:16" itemprop="dateCreated datePublished" datetime="2024-04-12T15:33:45+08:00">2024-04-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -276,7 +276,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="数值分析"><a href="#数值分析" class="headerlink" title="数值分析"></a>数值分析</h1><h2 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>设多元函数 $F(\mathbf{x})$ 在点 $\mathbf{a}$ 的邻域可微，那么 $F(\mathbf{x})$ 从 $\mathbf{a}$ 出发沿着 $F$ 在 $\mathbf{a}$ 点负梯度 $-\nabla F(\mathbf{a})$ 的方向下降最快. 也就是说，对于充分小的步长（step size）或学习率（learning rate）$\gamma\in\mathbb{R}<em>{+},$ 如果<br>$$<br>\mathbf{a}</em>{n+1}&#x3D;\mathbf{a}<em>{n}-\gamma\nabla F(\mathbf{a}</em>{n})<br>$$<br>那么有<br>$$<br>F(\mathbf{a}<em>{n})\geq F(\mathbf{a}</em>{n+1})<br>$$<br>基于此，如果我们猜想 $F$ 的一个局部最小值点 $\mathbf{x}<em>{0}$，并从此出发，考虑满足以下条件的序列 $\mathbf{x}</em>{0},\mathbf{x}<em>{1},\mathbf{x}</em>{2},\dots$<br>$$<br>\mathbf{x}<em>{n+1}&#x3D;\mathbf{x}</em>{n}-\gamma_{n}\nabla F(\mathbf{x}<em>{n}),n\geq 0.<br>$$<br>我们将得到一个单调序列<br>$$<br>F(\mathbf{x}</em>{0})\geq F(\mathbf{x}<em>{1})\geq F(\mathbf{x}</em>{2})\geq\dots,<br>$$<br>因此序列 $(\mathbf{x}_{n})$ 有希望收敛到局部最小值. 注意，步长 $\gamma$​ 在每一轮迭代中都可以改变.
+          <h1 id="数值分析"><a href="#数值分析" class="headerlink" title="数值分析"></a>数值分析</h1><h2 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>设多元函数 $F(\mathbf{x})$ 在点 $\mathbf{a}$ 的邻域可微，那么 $F(\mathbf{x})$ 从 $\mathbf{a}$ 出发沿着 $F$ 在 $\mathbf{a}$ 点负梯度 $-\nabla F(\mathbf{a})$ 的方向下降最快. 也就是说，对于充分小的步长（step size）或学习率（learning rate）$\gamma\in\mathbb{R}<em>{+},$  如果<br>$$<br>\mathbf{a}</em>{n+1}&#x3D;\mathbf{a}<em>{n}-\gamma\nabla F(\mathbf{a}</em>{n})<br>$$<br>那么有<br>$$<br>F(\mathbf{a}<em>{n})\geq F(\mathbf{a}</em>{n+1})<br>$$<br>基于此，如果我们猜想 $F$ 的一个局部最小值点 $\mathbf{x}<em>{0}$，并从此出发，考虑满足以下条件的序列 $\mathbf{x}</em>{0},\mathbf{x}<em>{1},\mathbf{x}</em>{2},\dots$<br>$$<br>\mathbf{x}<em>{n+1}&#x3D;\mathbf{x}</em>{n}-\gamma_{n}\nabla F(\mathbf{x}<em>{n}),n\geq 0.<br>$$<br>我们将得到一个单调序列<br>$$<br>F(\mathbf{x}</em>{0})\geq F(\mathbf{x}<em>{1})\geq F(\mathbf{x}</em>{2})\geq\dots,<br>$$<br>因此序列 $(\mathbf{x}_{n})$ 有希望收敛到局部最小值. 注意，步长 $\gamma$​ 在每一轮迭代中都可以改变.
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/04/12/%E7%8E%B0%E7%94%A8%E7%8E%B0%E5%AD%A6-%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/#more" rel="contents">
